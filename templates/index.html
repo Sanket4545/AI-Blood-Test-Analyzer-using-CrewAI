@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Report Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 8px solid #007bff;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .loading-message {
+            text-align: center;
+            font-size: 1.2em;
+            color: #007bff;
+            margin-top: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <script>
+        function showLoader() {
+            // Hide the form and show the loader
+            document.getElementById('upload-form').classList.add('hidden');
+            document.getElementById('loader').classList.remove('hidden');
+            document.getElementById('loading-message').classList.remove('hidden');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Your Blood Test Report (PDF)</h1>
+
+        <!-- Form to upload the PDF file -->
+        <form id="upload-form" method="POST" enctype="multipart/form-data" onsubmit="showLoader()">
+            <input type="file" name="file" accept="application/pdf" required>
+            <input type="submit" value="Upload">
+        </form>
+
+        <!-- Loader and message (initially hidden) -->
+        <div id="loader" class="loader hidden"></div>
+        <p id="loading-message" class="loading-message hidden">
+            Please wait while we process your report. The time required depends on the content in the PDF.
+        </p>
+    </div>
+</body>
+</html>

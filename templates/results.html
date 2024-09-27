@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Report Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        .recommendations {
+            padding: 20px;
+            background-color: #e9f7ef;
+            border-left: 5px solid #28a745;
+        }
+
+        .recommendations h2 {
+            color: #28a745;
+        }
+
+        .recommendations p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blood Report Analysis</h1>
+
+    <!-- Render the raw result directly -->
+    <div id="result">
+        {{ raw_result | safe }}
+    </div>
+</body>
+</html>
