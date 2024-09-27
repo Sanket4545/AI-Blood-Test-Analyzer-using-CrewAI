@@ -32,8 +32,7 @@ The **CrewAI** agents work together to process blood test reports and automate t
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
-cd <repository-directory>
+git clone https://github.com/Sanket4545/CrewAI_Task.git
 ```
 
 or Download the zip shared on mail
