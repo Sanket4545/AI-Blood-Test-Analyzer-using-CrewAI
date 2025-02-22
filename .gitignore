@@ -1,0 +1,4 @@
+# Node.js
+/backend/venv/
+/backend/bloodreportanalysercrew/.venv/
+/frontend/node_modules/

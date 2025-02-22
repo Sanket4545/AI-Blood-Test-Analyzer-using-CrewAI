@@ -1,0 +1,23 @@
+[project]
+name = "bloodreportanalysercrew"
+version = "0.1.0"
+description = "BloodReportAnalyserCrew using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.102.0,<1.0.0"
+]
+
+[project.scripts]
+bloodreportanalysercrew = "bloodreportanalysercrew.main:run"
+run_crew = "bloodreportanalysercrew.main:run"
+train = "bloodreportanalysercrew.main:train"
+replay = "bloodreportanalysercrew.main:replay"
+test = "bloodreportanalysercrew.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

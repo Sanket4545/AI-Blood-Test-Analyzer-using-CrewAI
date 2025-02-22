@@ -1,0 +1,52 @@
+research_task:
+  description: >
+    Create a summary from the data this data is about blood reports. {topic}
+    Make sure you generate a summary of a data provided to you. It should include the valuble information
+    
+  expected_output: >
+    A detailed summary about the {topic} which will contain the valuable information.
+  agent: summarizer
+
+reporting_task:
+  description: >
+    Review the context you got and expand each topic into a full section for a report.
+    Make sure the report is detailed and contains any and all relevant information. You should include the following topics in your report based on the analysis of a blood report.
+    Dificiency detection and alert:
+    Precautionary measures:
+    Diet Recommandation:
+    Additional Health and Lifestyle tips:
+  expected_output: >
+    A fully fledged report with the main topics, each with a full section of information.
+    The system provides personalized health insights based on the blood test results. The
+    recommendations are categorized into four key areas:-
+    Deficiency Detection & Alerts
+     Identifies low or high levels of important biomarkers (e.g., Hemoglobin, Vitamin D,
+    Cholesterol).
+     Flags potential health concerns, such as anemia, diabetes risk, or vitamin deficiencies.
+     Alerts users if any values fall outside the normal range and require medical attention.
+    Example Output:-
+    "Iron Deficiency Detected (Hemoglobin: 10.5 g/dL). Consider iron supplementation."
+    Precautionary Measures
+     Suggests lifestyle changes to manage or prevent health issues.
+     Provides guidelines on monitoring test values (e.g., retest in 3 months).
+     Advises on doctor consultation if necessary based on risk levels.
+    Example Output:-
+    "Your blood sugar is slightly elevated. Maintain a low-sugar diet and monitor levels
+    regularly."
+    Dietary Recommendations
+     Suggests nutrient-rich foods to improve detected deficiencies.
+     Recommends a balanced diet tailored to the test results (e.g., iron-rich foods for
+    anemia, high-fiber foods for cholesterol control).
+     Advises on hydration and overall nutrition.
+    Example Output:-
+    "Increase intake of leafy greens, lean meats, and vitamin C-rich foods to improve iron
+    absorption."
+    Additional Health & Lifestyle Tips
+     Suggests exercise routines based on the test results.
+     Provides hydration and sleep recommendations to improve overall health.
+     Advises on potential medications or supplements, if needed.
+    Example Output:-
+    "Consider a daily 30-minute walk to help regulate blood pressure and improve heart
+    health."
+ 
+  agent: reporting_analyst
